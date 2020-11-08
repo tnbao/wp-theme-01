@@ -1,0 +1,10 @@
+$color-theme-primary: #7fad39;
+$color-text: #666666;
+
+.link-normal {
+  color: $color-text;
+
+  &:hover {
+    color: $color-theme-primary;
+  }
+}
