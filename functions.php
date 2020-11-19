@@ -88,3 +88,35 @@ function active_nav_class( $classes, $item ) {
 }
 
 add_filter( 'nav_menu_css_class', 'active_nav_class', 10, 2 );
+
+// Post thumbnails support
+add_theme_support( 'post-thumbnails' );
+
+function wpdocs_theme_setup() {
+	add_image_size( 'post_thumbnail_small', 70 ); // 70 pixels wide (and unlimited height)
+	add_image_size( 'post_thumbnail_large', 360, 360, true ); // 70 pixels wide (and unlimited height)
+	add_image_size( 'product_thumbnail', 270, 270, true ); // (cropped)
+}
+
+add_action( 'after_setup_theme', 'wpdocs_theme_setup' );
+
+/**
+ * Return the no-image.png if the post has no thumbnail.
+ *
+ * @param string $html Post thumbnail HTML.
+ * @param int $post_id Post ID.
+ * @param int $post_image_id Post image ID.
+ *
+ * @return string Filtered post image HTML.
+ */
+function wpdocs_post_image_html( $html, $post_id, $post_image_id ) {
+	if ( ! has_post_thumbnail( $post_id ) ) {
+		$noImageSrc = get_bloginfo( 'template_directory' ) . '/assets/img/no-image.png';
+
+		return '<img src="' . $noImageSrc . '" width="70" alt="">';
+	}
+
+	return $html;
+}
+
+add_filter( 'post_thumbnail_html', 'wpdocs_post_image_html', 10, 3 );

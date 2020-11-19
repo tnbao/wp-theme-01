@@ -7,6 +7,7 @@
 	<?php
 	$author          = get_the_author_meta( 'last_name' ) . ' ' . get_the_author_meta( 'first_name' );
 	$author_nickname = get_the_author_meta( 'nickname' );
+	$author_image    = get_avatar( get_the_author_meta( 'ID' ), 92 )
 	?>
 
   <!-- Blog Details Hero Begin -->
@@ -36,67 +37,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-5 order-md-1 order-2">
-          <div class="blog__sidebar">
-            <div class="blog__sidebar__search">
-              <form action="#">
-                <input type="text" placeholder="Search...">
-                <button type="submit"><span class="icon_search"></span></button>
-              </form>
-            </div>
-            <div class="blog__sidebar__item">
-              <h4>Categories</h4>
-              <ul>
-                <li><a href="#">All</a></li>
-                <li><a href="#">Beauty (20)</a></li>
-                <li><a href="#">Food (5)</a></li>
-                <li><a href="#">Life Style (9)</a></li>
-                <li><a href="#">Travel (10)</a></li>
-              </ul>
-            </div>
-            <div class="blog__sidebar__item">
-              <h4>Recent News</h4>
-              <div class="blog__sidebar__recent">
-                <a href="#" class="blog__sidebar__recent__item">
-                  <div class="blog__sidebar__recent__item__pic">
-                    <img src="<?php bloginfo( 'template_directory' ) ?>/img/blog/sidebar/sr-1.jpg" alt="">
-                  </div>
-                  <div class="blog__sidebar__recent__item__text">
-                    <h6>09 Kinds Of Vegetables<br/> Protect The Liver</h6>
-                    <span>MAR 05, 2019</span>
-                  </div>
-                </a>
-                <a href="#" class="blog__sidebar__recent__item">
-                  <div class="blog__sidebar__recent__item__pic">
-                    <img src="<?php bloginfo( 'template_directory' ) ?>/img/blog/sidebar/sr-2.jpg" alt="">
-                  </div>
-                  <div class="blog__sidebar__recent__item__text">
-                    <h6>Tips You To Balance<br/> Nutrition Meal Day</h6>
-                    <span>MAR 05, 2019</span>
-                  </div>
-                </a>
-                <a href="#" class="blog__sidebar__recent__item">
-                  <div class="blog__sidebar__recent__item__pic">
-                    <img src="<?php bloginfo( 'template_directory' ) ?>/img/blog/sidebar/sr-3.jpg" alt="">
-                  </div>
-                  <div class="blog__sidebar__recent__item__text">
-                    <h6>4 Principles Help You Lose <br/>Weight With Vegetables</h6>
-                    <span>MAR 05, 2019</span>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="blog__sidebar__item">
-              <h4>Search By</h4>
-              <div class="blog__sidebar__item__tags">
-                <a href="#">Apple</a>
-                <a href="#">Beauty</a>
-                <a href="#">Vegetables</a>
-                <a href="#">Fruit</a>
-                <a href="#">Healthy Food</a>
-                <a href="#">Lifestyle</a>
-              </div>
-            </div>
-          </div>
+					<?php get_template_part( 'template-parts/section', 'blog-sidebar' ) ?>
         </div>
         <div class="col-lg-8 col-md-7 order-md-1 order-1">
           <div class="blog__details__text">
@@ -107,7 +48,7 @@
               <div class="col-lg-6">
                 <div class="blog__details__author">
                   <div class="blog__details__author__pic">
-                    <img src="<?php bloginfo( 'template_directory' ) ?>/img/blog/details/details-author.jpg" alt="">
+										<?php echo $author_image; ?>
                   </div>
                   <div class="blog__details__author__text">
                     <h6><?php echo $author; ?></h6>

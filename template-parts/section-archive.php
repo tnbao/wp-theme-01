@@ -1,7 +1,7 @@
 <div class="col-lg-6 col-md-6 col-sm-6">
   <div class="blog__item">
     <div class="blog__item__pic">
-      <img src="<?php bloginfo( 'template_directory' ) ?>/img/blog/blog-2.jpg" alt="">
+			<?php echo get_the_post_thumbnail( get_the_ID(), 'post_thumbnail_large' ); ?>
     </div>
     <div class="blog__item__text">
       <ul>

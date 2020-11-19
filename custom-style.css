@@ -5,4 +5,8 @@
   color: #7fad39;
 }
 
+.blog__item__pic img {
+  height: auto;
+}
+
 /*# sourceMappingURL=custom-style.css.map */
