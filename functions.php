@@ -94,7 +94,8 @@ add_theme_support( 'post-thumbnails' );
 
 function wpdocs_theme_setup() {
 	add_image_size( 'post_thumbnail_small', 70 ); // 70 pixels wide (and unlimited height)
-	add_image_size( 'post_thumbnail_large', 360, 360, true ); // 70 pixels wide (and unlimited height)
+	add_image_size( 'post_thumbnail_large', 360, 360, true );
+	add_image_size( 'blog_body_img', 750);
 	add_image_size( 'product_thumbnail', 270, 270, true ); // (cropped)
 }
 

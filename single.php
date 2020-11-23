@@ -41,6 +41,7 @@
         </div>
         <div class="col-lg-8 col-md-7 order-md-1 order-1">
           <div class="blog__details__text">
+						<?php echo get_the_post_thumbnail( get_the_ID(), 'blog_body_img' ); ?>
 						<?php the_content(); ?>
           </div>
           <div class="blog__details__content">
@@ -125,7 +126,7 @@ if ( $post_may_like ): ?>
             <div class="blog__item">
               <div class="blog__item__pic">
                 <a href="<?php the_permalink(); ?>">
-                  <img src="<?php bloginfo( 'template_directory' ) ?>/img/blog/blog-1.jpg" alt="">
+									<?php echo get_the_post_thumbnail( get_the_ID(), 'post_thumbnail_large' ); ?>
                 </a>
               </div>
               <div class="blog__item__text">
@@ -134,7 +135,9 @@ if ( $post_may_like ): ?>
                   <li><i class="fa fa-comment-o"></i> <?php echo get_comments_number( get_the_ID() ); ?></li>
                 </ul>
                 <h5><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
-                <p><?php the_excerpt(); ?></p>
+                <a href="<?php the_permalink(); ?>">
+                  <p><?php the_excerpt(); ?></p>
+                </a>
               </div>
             </div>
           </div>
