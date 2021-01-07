@@ -1,9 +1,6 @@
 <div class="blog__sidebar">
   <div class="blog__sidebar__search">
-    <form action="#">
-      <input type="text" placeholder="Search...">
-      <button type="submit"><span class="icon_search"></span></button>
-    </form>
+    <?php get_search_form(); ?>
   </div>
   <div class="blog__sidebar__item">
     <h4>Categories</h4>
