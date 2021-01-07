@@ -5,7 +5,7 @@
 <?php if ( have_posts() ): while ( have_posts() ): the_post(); ?>
 
 	<?php
-	$author          = get_the_author_meta( 'last_name' ) . ' ' . get_the_author_meta( 'first_name' );
+	$author          = trim(' ', get_the_author_meta( 'last_name' ) . ' ' . get_the_author_meta( 'first_name' )) | get_the_author_meta('nickname');
 	$author_nickname = get_the_author_meta( 'nickname' );
 	$author_image    = get_avatar( get_the_author_meta( 'ID' ), 92 )
 	?>
@@ -19,7 +19,9 @@
           <div class="blog__details__hero__text">
             <h2><?php the_title(); ?></h2>
             <ul>
-              <li><?php echo $author; ?></li>
+              <?php if ( !empty($author) ): ?>
+                <li><?php echo $author; ?></li>
+              <?php endif; ?>
               <li><?php the_date(); ?></li>
 							<?php if ( get_comments_number( get_the_ID() ) > 0 ): ?>
                 <li><i class="fa fa-comment-o"></i> <?php echo get_comments_number( get_the_ID() ); ?></li>
@@ -36,9 +38,6 @@
   <section class="blog-details spade">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-5 order-md-1 order-2">
-					<?php get_template_part( 'template-parts/section', 'blog-sidebar' ) ?>
-        </div>
         <div class="col-lg-8 col-md-7 order-md-1 order-1">
           <div class="blog__details__text">
 						<?php echo get_the_post_thumbnail( get_the_ID(), 'blog_body_img' ); ?>
@@ -96,6 +95,9 @@
           </div>
 
 					<?php /*comments_template(); */ ?>
+        </div>
+        <div class="col-lg-4 col-md-5 order-md-1 order-2">
+          <?php get_template_part( 'template-parts/section', 'blog-sidebar' ) ?>
         </div>
       </div>
     </div>
