@@ -59,8 +59,10 @@ function load_js() {
 
 add_action( 'wp_enqueue_scripts', 'load_js' );
 
-// Menu support
+// Theme options
 add_theme_support( 'menus' );
+add_theme_support( 'post-thumbnails' );
+add_theme_support( 'widgets' );
 
 // Register menus
 register_nav_menus(
@@ -88,9 +90,6 @@ function active_nav_class( $classes, $item ) {
 }
 
 add_filter( 'nav_menu_css_class', 'active_nav_class', 10, 2 );
-
-// Post thumbnails support
-add_theme_support( 'post-thumbnails' );
 
 function wpdocs_theme_setup() {
 	add_image_size( 'post_thumbnail_small', 70 ); // 70 pixels wide (and unlimited height)
@@ -121,3 +120,25 @@ function wpdocs_post_image_html( $html, $post_id, $post_image_id ) {
 }
 
 add_filter( 'post_thumbnail_html', 'wpdocs_post_image_html', 10, 3 );
+
+// Register Sidebars
+function my_sidebars() {
+  register_sidebar(
+    array(
+      'name' => 'Page Sidebar',
+      'id' => 'page-sidebar',
+      'before_title' => '<h4 class="widget-title">',
+      'after_title' => '</h4>'
+    )
+  );
+  register_sidebar(
+    array(
+      'name' => 'Blog Sidebar',
+      'id' => 'blog-sidebar',
+      'before_title' => '<h4 class="widget-title">',
+      'after_title' => '</h4>'
+    )
+  );
+}
+
+add_action('widgets_init', 'my_sidebars');
