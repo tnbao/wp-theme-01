@@ -6,7 +6,7 @@ if ( isset( $args ) ) {
 ?>
 
 <!-- Breadcrumb Section Begin -->
-<section class="breadcrumb-section set-bg" data-setbg="<?php bloginfo('template_directory') ?>/img/breadcrumb.jpg">
+<section class="breadcrumb-section set-bg" data-setbg="<?php bloginfo('template_directory') ?>/resources/img/breadcrumb.jpg">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">

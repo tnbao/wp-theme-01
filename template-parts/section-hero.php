@@ -53,7 +53,7 @@ if ( isset( $args ) ) {
           </div>
         </div>
         <?php if ($is_display_main_visual): ?>
-        <div class="hero__item set-bg" data-setbg="<?php bloginfo('template_directory') ?>/img/hero/banner.jpg">
+        <div class="hero__item set-bg" data-setbg="<?php bloginfo('template_directory') ?>/resources/img/hero/banner.jpg">
           <div class="hero__text">
             <span>FRUIT FRESH</span>
             <h2>Vegetable <br />100% Organic</h2>

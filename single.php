@@ -12,7 +12,7 @@
 
   <!-- Blog Details Hero Begin -->
   <section class="blog-details-hero set-bg"
-           data-setbg="<?php bloginfo( 'template_directory' ) ?>/img/blog/details/details-hero.jpg">
+           data-setbg="<?php bloginfo( 'template_directory') ?>/resources/img/blog/details/details-hero.jpg">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">

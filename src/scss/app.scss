@@ -1,8 +1,12 @@
+$color-theme-primary: #7fad39;
+$color-text: #666666;
+
 .link-normal {
-  color: #666666;
-}
-.link-normal:hover {
-  color: #7fad39;
+  color: $color-text;
+
+  &:hover {
+    color: $color-theme-primary;
+  }
 }
 
 .blog__item__pic img {
@@ -20,4 +24,6 @@
   height: 200px;
 }
 
-/*# sourceMappingURL=custom-style.css.map */
+.breadcrumb__option a:after {
+  right: -18px;
+}

@@ -26,7 +26,7 @@
 <div class="hamburger__menu__overlay"></div>
 <div class="hamburger__menu__wrapper">
   <div class="hamburger__menu__logo">
-    <a href="#"><img src="<?php bloginfo('template_directory') ?>/img/logo.png" alt=""></a>
+    <a href="#"><img src="<?php bloginfo('template_directory') ?>/resources/img/logo.png" alt=""></a>
   </div>
   <div class="hamburger__menu__cart">
     <ul>
@@ -37,7 +37,7 @@
   </div>
   <div class="hamburger__menu__widget">
     <div class="header__top__right__language">
-      <img src="<?php bloginfo('template_directory') ?>/img/language.png" alt="">
+      <img src="<?php bloginfo('template_directory') ?>/resources/img/language.png" alt="">
       <div>English</div>
       <span class="arrow_carrot-down"></span>
       <ul>
@@ -97,7 +97,7 @@
               <a href="#"><i class="fa fa-pinterest-p"></i></a>
             </div>
             <div class="header__top__right__language">
-              <img src="<?php bloginfo('template_directory') ?>/img/language.png" alt="">
+              <img src="<?php bloginfo('template_directory') ?>/resources/img/language.png" alt="">
               <div>English</div>
               <span class="arrow_carrot-down"></span>
               <ul>
@@ -117,7 +117,7 @@
     <div class="row">
       <div class="col-lg-3">
         <div class="header__logo">
-          <a href="/"><img src="<?php bloginfo('template_directory') ?>/img/logo.png" alt=""></a>
+          <a href="/"><img src="<?php bloginfo('template_directory') ?>/resources/img/logo.png" alt=""></a>
         </div>
       </div>
       <div class="col-lg-6">
