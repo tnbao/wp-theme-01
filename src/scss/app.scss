@@ -1,5 +1,4 @@
-$color-theme-primary: #7fad39;
-$color-text: #666666;
+@use "colors" as *;
 
 .link-normal {
   color: $color-text;
@@ -24,6 +23,22 @@ $color-text: #666666;
   height: 200px;
 }
 
-.breadcrumb__option a:after {
-  right: -18px;
+.breadcrumb__text {
+  h2 {
+    color: $color-000000;
+  }
+}
+.breadcrumb__option {
+  a {
+    color: $color-000000;
+
+    &::after {
+      right: -18px;
+      background: $color-000000;
+    }
+  }
+
+  span {
+    color: $color-000000;
+  }
 }
