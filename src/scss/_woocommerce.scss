@@ -1,0 +1,30 @@
+@use "colors" as *;
+
+.woocommerce-Price-amount {
+  text-decoration: none;
+}
+
+.woocommerce-Price-currencySymbol {
+  font-size: 75%;
+}
+
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
+  max-width: unset;
+}
+
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
+  max-width: unset;
+}
+
+.woocommerce {
+  .woocommerce-input-wrapper {
+    width: 100%;
+    display: block;
+  }
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+  background-color: $color-f0f0f0;
+  padding: 0.25rem;
+  border: 1px solid darken($color-f0f0f0, 20%);
+}

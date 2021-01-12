@@ -1,4 +1,5 @@
 @use "colors" as *;
+@use "woocommerce";
 
 .link-normal {
   color: $color-text;
@@ -41,4 +42,23 @@
   span {
     color: $color-000000;
   }
+}
+
+#preloader {
+  .loader::before {
+    display: none;
+  }
+}
+
+a {
+  color: $color-theme-primary;
+
+  &:hover {
+    color: lighten($color-theme-primary, 20%);
+  }
+}
+
+.nice-select .list {
+  overflow-y: auto;
+  max-height: 300px;
 }
